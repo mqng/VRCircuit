@@ -1,0 +1,526 @@
+Begin Map
+   Begin Level
+      Begin Actor Class=/Script/Engine.PlayerStart Name=PlayerStart Archetype=/Script/Engine.PlayerStart'/Script/Engine.Default__PlayerStart'
+         Begin Object Class=/Script/Engine.CapsuleComponent Name="CollisionCapsule" Archetype=CapsuleComponent'/Script/Engine.Default__PlayerStart:CollisionCapsule'
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype=BillboardComponent'/Script/Engine.Default__PlayerStart:Sprite'
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite2" Archetype=BillboardComponent'/Script/Engine.Default__PlayerStart:Sprite2'
+         End Object
+         Begin Object Class=/Script/Engine.ArrowComponent Name="Arrow" Archetype=ArrowComponent'/Script/Engine.Default__PlayerStart:Arrow'
+         End Object
+         Begin Object Name="CollisionCapsule"
+            AreaClass=Class'"/Script/NavigationSystem.NavArea_Obstacle"'
+            RelativeLocation=(X=-260.000000,Y=0.000000,Z=120.000000)
+         End Object
+         Begin Object Name="Sprite"
+            AttachParent="CollisionCapsule"
+         End Object
+         Begin Object Name="Sprite2"
+            AttachParent="CollisionCapsule"
+         End Object
+         Begin Object Name="Arrow"
+            AttachParent="CollisionCapsule"
+         End Object
+         CapsuleComponent="CollisionCapsule"
+         bCanBeDamaged=False
+         RootComponent="CollisionCapsule"
+         ActorLabel="Player Start"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=Floor Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor'
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/MapTemplates/SM_Template_Map_Floor.SM_Template_Map_Floor"'
+            StreamingTextureData(0)=(PackedRelativeBox=4294901760,TexelFactor=10.013148)
+            StreamingTextureData(1)=(PackedRelativeBox=4294901760,TextureLevelIndex=1,TexelFactor=200.262970)
+            StaticMeshDerivedDataKey="STATICMESH_34081786561B425A9523C94540EA599D_359a029847e84730ba516769d0f19427Simplygon_5_5_2156_18f808c3cf724e5a994f57de5c83cc4b_680318F3495BDBDEBE4C11B39CD497CE000000000100000001000000000000000000803F0000803F00000000000000000000344203030300000000"
+            MaterialStreamingRelativeBoxes(0)=4294901760
+            OverrideMaterials(0)=None
+            VisibilityId=0
+            BodyInstance=(bAutoWeld=False)
+            RelativeLocation=(X=0.000000,Y=0.000000,Z=20.000000)
+            CustomProperties 
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="Floor"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=AND_Gate Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor'
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Cube.Cube"'
+            bUseDefaultCollision=False
+            StaticMeshDerivedDataKey="STATICMESH_9CE2B6FB46754B699726C4AA1515F12E_228332BAE0224DD294E232B87D83948FQuadricMeshReduction_V1$2e0_26D666F86459324BE77D4F6A1939C6698000000000100000001000000000000000100000001000000010000000000000000000000000000004000000000000000020000000000803F0000803F0000803F0000004000000000050000004E6F6E650030000000803F0000803F000000000000004100000000000034420303030000000000000000LS0MNSzzzzzzzz0"
+            OverrideMaterials(0)=Material'"/Game/CustomMaterials/Metallic_Gray.Metallic_Gray"'
+            BodyInstance=(ObjectType=ECC_PhysicsBody,CollisionProfileName="PhysicsActor",MassInKgOverride=1000.000000,MaxAngularVelocity=3599.999756,bSimulatePhysics=True)
+            RelativeLocation=(X=-420.000000,Y=-255.000000,Z=25.000000)
+            RelativeRotation=(Pitch=0.000000,Yaw=180.000198,Roll=0.000000)
+            RelativeScale3D=(X=0.535000,Y=0.250000,Z=0.125000)
+            Mobility=Movable
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         bCanBeDamaged=True
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="AND_Gate"
+         Tags(0)="Grabbable"
+         InstanceComponents(0)=None
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=Circuit_Lane Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor'
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Cylinder.Cylinder"'
+            StaticMeshImportVersion=1
+            bUseDefaultCollision=False
+            StaticMeshDerivedDataKey="STATICMESH_9CE2B6FB46754B699726C4AA1515F12E_228332BAE0224DD294E232B87D83948FQuadricMeshReduction_V1$2e0_2D95915274B0A9B6BA6E2C8A3B1776A78000000000100000001000000000000000100000001000000010000000000000000000000000000004000000000000000010000000000803F0000803F0000803F0000004000000000050000004E6F6E650030000000803F0000803F000000000000004100000000000034420303030000000000000000LS0MNSzzzzzzzz0"
+            OverrideMaterials(0)=Material'"/Game/CustomMaterials/Matte_White.Matte_White"'
+            BodyInstance=(ObjectType=ECC_PhysicsBody,CollisionProfileName="PhysicsActor",MassInKgOverride=1.000000,MaxAngularVelocity=3599.999756,bSimulatePhysics=True)
+            RelativeLocation=(X=-410.000000,Y=-130.000000,Z=30.000000)
+            RelativeRotation=(Pitch=90.000000,Yaw=180.000000,Roll=180.000000)
+            RelativeScale3D=(X=0.020000,Y=0.020000,Z=0.200000)
+            Mobility=Movable
+            CustomProperties 
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         bCanBeDamaged=True
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="Circuit_Lane"
+         Tags(0)="Grabbable"
+         InstanceComponents(0)=None
+      End Actor
+      Begin Actor Class=/Script/Engine.DirectionalLight Name=Sun Archetype=/Script/Engine.DirectionalLight'/Script/Engine.Default__DirectionalLight'
+         Begin Object Class=/Script/Engine.DirectionalLightComponent Name="LightComponent0" Archetype=DirectionalLightComponent'/Script/Engine.Default__DirectionalLight:LightComponent0'
+         End Object
+         Begin Object Class=/Script/Engine.ArrowComponent Name="ArrowComponent0" Archetype=ArrowComponent'/Script/Engine.Default__DirectionalLight:ArrowComponent0'
+         End Object
+         Begin Object Name="LightComponent0"
+            LightGuid=2FAB03954E867E6B88DD2986D1E1428E
+            Intensity=2.000000
+            RelativeLocation=(X=120.000000,Y=-30.000000,Z=610.000000)
+            RelativeRotation=(Pitch=-72.396942,Yaw=-175.373047,Roll=115.098053)
+         End Object
+         Begin Object Name="ArrowComponent0"
+            ArrowColor=(B=255,G=255,R=255,A=255)
+            AttachParent="LightComponent0"
+         End Object
+         ArrowComponent="ArrowComponent0"
+         DirectionalLightComponent="LightComponent0"
+         LightComponent="LightComponent0"
+         RootComponent="LightComponent0"
+         ActorLabel="Sun"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=LED_Light Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor'
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Cylinder.Cylinder"'
+            StaticMeshImportVersion=1
+            bUseDefaultCollision=False
+            StaticMeshDerivedDataKey="STATICMESH_9CE2B6FB46754B699726C4AA1515F12E_228332BAE0224DD294E232B87D83948FQuadricMeshReduction_V1$2e0_2D95915274B0A9B6BA6E2C8A3B1776A78000000000100000001000000000000000100000001000000010000000000000000000000000000004000000000000000010000000000803F0000803F0000803F0000004000000000050000004E6F6E650030000000803F0000803F000000000000004100000000000034420303030000000000000000LS0MNSzzzzzzzz0"
+            OverrideMaterials(0)=Material'"/Game/CustomMaterials/Matte_White.Matte_White"'
+            BodyInstance=(ObjectType=ECC_PhysicsBody,CollisionProfileName="PhysicsActor",MassInKgOverride=10.000000,MaxAngularVelocity=3599.999756,bSimulatePhysics=True)
+            RelativeLocation=(X=-470.000000,Y=30.000000,Z=22.000000)
+            RelativeScale3D=(X=0.100000,Y=0.100000,Z=0.010000)
+            Mobility=Movable
+            CustomProperties 
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         bCanBeDamaged=True
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="LED_Light"
+         Tags(0)="Grabbable"
+         InstanceComponents(0)=None
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=Playing_field Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor'
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Plane.Plane"'
+            StaticMeshImportVersion=1
+            StaticMeshDerivedDataKey="STATICMESH_9CE2B6FB46754B699726C4AA1515F12E_228332BAE0224DD294E232B87D83948FQuadricMeshReduction_V1$2e0_3F8C76BE469D6CAEBDC47F82BF709939000000000100000001000000000000000000000001000000010000000000000000000000010000000001000000000000010000000000803F0000803F0000803F0000803F00000000050000004E6F6E650030000000803F0000803F0000000000000041000000000000A0420303030000000000000000LS0MNSzzzzzzzz0"
+            MaterialStreamingRelativeBoxes(0)=67043328
+            OverrideMaterials(0)=Material'"/Game/CustomMaterials/Transparency.Transparency"'
+            VisibilityId=1
+            RelativeLocation=(X=50.000000,Y=0.000000,Z=20.100000)
+            RelativeScale3D=(X=7.000000,Y=8.000000,Z=1.000000)
+            CustomProperties 
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="Playing_field"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=Input_Area Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor'
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Plane.Plane"'
+            StaticMeshImportVersion=1
+            StaticMeshDerivedDataKey="STATICMESH_9CE2B6FB46754B699726C4AA1515F12E_228332BAE0224DD294E232B87D83948FQuadricMeshReduction_V1$2e0_3F8C76BE469D6CAEBDC47F82BF709939000000000100000001000000000000000000000001000000010000000000000000000000010000000001000000000000010000000000803F0000803F0000803F0000803F00000000050000004E6F6E650030000000803F0000803F0000000000000041000000000000A0420303030000000000000000LS0MNSzzzzzzzz0"
+            MaterialStreamingRelativeBoxes(0)=67043328
+            OverrideMaterials(0)=Material'"/Game/CustomMaterials/DarkGray.DarkGray"'
+            VisibilityId=2
+            RelativeLocation=(X=50.000000,Y=-450.000000,Z=20.100000)
+            RelativeScale3D=(X=7.000000,Y=1.000000,Z=1.000000)
+            CustomProperties 
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="Input_Area"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=Output_Area Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor'
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Plane.Plane"'
+            StaticMeshImportVersion=1
+            StaticMeshDerivedDataKey="STATICMESH_9CE2B6FB46754B699726C4AA1515F12E_228332BAE0224DD294E232B87D83948FQuadricMeshReduction_V1$2e0_3F8C76BE469D6CAEBDC47F82BF709939000000000100000001000000000000000000000001000000010000000000000000000000010000000001000000000000010000000000803F0000803F0000803F0000803F00000000050000004E6F6E650030000000803F0000803F0000000000000041000000000000A0420303030000000000000000LS0MNSzzzzzzzz0"
+            MaterialStreamingRelativeBoxes(0)=67043328
+            OverrideMaterials(0)=Material'"/Game/CustomMaterials/DarkGray.DarkGray"'
+            VisibilityId=3
+            RelativeLocation=(X=50.000000,Y=450.000000,Z=20.100000)
+            RelativeScale3D=(X=7.000000,Y=1.000000,Z=1.000000)
+            CustomProperties 
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="Output_Area"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=NOT_Gate Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor'
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Cube.Cube"'
+            bUseDefaultCollision=False
+            StaticMeshDerivedDataKey="STATICMESH_9CE2B6FB46754B699726C4AA1515F12E_228332BAE0224DD294E232B87D83948FQuadricMeshReduction_V1$2e0_26D666F86459324BE77D4F6A1939C6698000000000100000001000000000000000100000001000000010000000000000000000000000000004000000000000000020000000000803F0000803F0000803F0000004000000000050000004E6F6E650030000000803F0000803F000000000000004100000000000034420303030000000000000000LS0MNSzzzzzzzz0"
+            OverrideMaterials(0)=Material'"/Game/CustomMaterials/Metallic_Gray.Metallic_Gray"'
+            BodyInstance=(ObjectType=ECC_PhysicsBody,CollisionProfileName="PhysicsActor",MaxAngularVelocity=3599.999756,bSimulatePhysics=True)
+            RelativeLocation=(X=-420.000000,Y=-205.000000,Z=25.000000)
+            RelativeRotation=(Pitch=0.000000,Yaw=180.000198,Roll=0.000000)
+            RelativeScale3D=(X=0.535000,Y=0.250000,Z=0.125000)
+            Mobility=Movable
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         bCanBeDamaged=True
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="NOT_Gate"
+         Tags(0)="Grabbable"
+         InstanceComponents(0)=None
+      End Actor
+      Begin Actor Class=/Script/Engine.TextRenderActor Name=Gate_Name Archetype=/Script/Engine.TextRenderActor'/Script/Engine.Default__TextRenderActor' ParentActor=AND_Gate
+         Begin Object Class=/Script/Engine.TextRenderComponent Name="NewTextRenderComponent" Archetype=TextRenderComponent'/Script/Engine.Default__TextRenderActor:NewTextRenderComponent'
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype=BillboardComponent'/Script/Engine.Default__TextRenderActor:Sprite'
+         End Object
+         Begin Object Name="NewTextRenderComponent"
+            Text=NSLOCTEXT("[764D6BBD47E8990F8B3974AF1C019ECF]", "E117C3964BE3F36DE9C182B2E1287CC6", "AND")
+            RelativeLocation=(X=-437.120056,Y=-247.500031,Z=31.500002)
+            RelativeRotation=(Pitch=90.000000,Yaw=0.000000,Roll=-90.000214)
+            RelativeScale3D=(X=1.605000,Y=0.750000,Z=0.625000)
+         End Object
+         Begin Object Name="Sprite"
+            AttachParent="NewTextRenderComponent"
+         End Object
+         TextRender="NewTextRenderComponent"
+         RootComponent="NewTextRenderComponent"
+         ActorLabel="Gate_Name"
+         Tags(0)="Grabbable"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=Input_1 Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor' ParentActor=AND_Gate
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Cylinder.Cylinder"'
+            StaticMeshImportVersion=1
+            bUseDefaultCollision=False
+            StaticMeshDerivedDataKey="STATICMESH_9CE2B6FB46754B699726C4AA1515F12E_228332BAE0224DD294E232B87D83948FQuadricMeshReduction_V1$2e0_2D95915274B0A9B6BA6E2C8A3B1776A78000000000100000001000000000000000100000001000000010000000000000000000000000000004000000000000000010000000000803F0000803F0000803F0000004000000000050000004E6F6E650030000000803F0000803F000000000000004100000000000034420303030000000000000000LS0MNSzzzzzzzz0"
+            OverrideMaterials(0)=Material'"/Engine/BasicShapes/BasicShapeMaterial.BasicShapeMaterial"'
+            BodyInstance=(ObjectType=ECC_WorldDynamic,CollisionProfileName="BlockAllDynamic",MaxAngularVelocity=3599.999756)
+            RelativeLocation=(X=-445.148010,Y=-260.000092,Z=25.000000)
+            RelativeRotation=(Pitch=90.000000,Yaw=0.000091,Roll=0.000139)
+            RelativeScale3D=(X=0.040000,Y=0.040000,Z=0.070000)
+            Mobility=Movable
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="Input_1"
+         Tags(0)="Grabbable"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=Input_2 Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor' ParentActor=AND_Gate
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Cylinder.Cylinder"'
+            StaticMeshImportVersion=1
+            bUseDefaultCollision=False
+            StaticMeshDerivedDataKey="STATICMESH_9CE2B6FB46754B699726C4AA1515F12E_228332BAE0224DD294E232B87D83948FQuadricMeshReduction_V1$2e0_2D95915274B0A9B6BA6E2C8A3B1776A78000000000100000001000000000000000100000001000000010000000000000000000000000000004000000000000000010000000000803F0000803F0000803F0000004000000000050000004E6F6E650030000000803F0000803F000000000000004100000000000034420303030000000000000000LS0MNSzzzzzzzz0"
+            OverrideMaterials(0)=Material'"/Engine/BasicShapes/BasicShapeMaterial.BasicShapeMaterial"'
+            BodyInstance=(ObjectType=ECC_WorldDynamic,CollisionProfileName="BlockAllDynamic",MaxAngularVelocity=3599.999756)
+            RelativeLocation=(X=-445.148041,Y=-250.000092,Z=25.000000)
+            RelativeRotation=(Pitch=90.000000,Yaw=0.000091,Roll=0.000139)
+            RelativeScale3D=(X=0.040000,Y=0.040000,Z=0.070000)
+            Mobility=Movable
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="Input_2"
+         Tags(0)="Grabbable"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=Output_1 Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor' ParentActor=AND_Gate
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Cylinder.Cylinder"'
+            StaticMeshImportVersion=1
+            bUseDefaultCollision=False
+            StaticMeshDerivedDataKey="STATICMESH_9CE2B6FB46754B699726C4AA1515F12E_228332BAE0224DD294E232B87D83948FQuadricMeshReduction_V1$2e0_2D95915274B0A9B6BA6E2C8A3B1776A78000000000100000001000000000000000100000001000000010000000000000000000000000000004000000000000000010000000000803F0000803F0000803F0000004000000000050000004E6F6E650030000000803F0000803F000000000000004100000000000034420303030000000000000000LS0MNSzzzzzzzz0"
+            OverrideMaterials(0)=Material'"/Engine/BasicShapes/BasicShapeMaterial.BasicShapeMaterial"'
+            BodyInstance=(ObjectType=ECC_WorldDynamic,CollisionProfileName="BlockAllDynamic",MaxAngularVelocity=3599.999756)
+            RelativeLocation=(X=-394.852448,Y=-254.999908,Z=25.000000)
+            RelativeRotation=(Pitch=90.000000,Yaw=-179.999756,Roll=-179.999756)
+            RelativeScale3D=(X=0.040000,Y=0.040000,Z=0.070000)
+            Mobility=Movable
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="Output_1"
+         Tags(0)="Grabbable"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=Sphere_8 Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor' ParentActor=LED_Light
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Sphere.Sphere"'
+            StaticMeshDerivedDataKey="STATICMESH_9CE2B6FB46754B699726C4AA1515F12E_228332BAE0224DD294E232B87D83948FQuadricMeshReduction_V1$2e0_DC3D38E14493224648B21A8FAD43B0BE000000000100000001000000000000000100000001000000010000000000000000000000000000004000000000000000010000000000803F0000803F0000803F0000004000000000050000004E6F6E650030000000803F0000803F000000000000004100000000000034420303030000000000000000LS0MNSzzzzzzzz0"
+            OverrideMaterials(0)=Material'"/Game/CustomMaterials/Glass.Glass"'
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            RelativeLocation=(X=-470.000000,Y=30.000000,Z=22.670000)
+            RelativeScale3D=(X=0.070000,Y=0.070000,Z=0.019075)
+            Mobility=Movable
+            CustomProperties 
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="Sphere"
+         Tags(0)="Grabbable"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=Input_Port Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor' ParentActor=LED_Light
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Cylinder.Cylinder"'
+            StaticMeshImportVersion=1
+            StaticMeshDerivedDataKey="STATICMESH_9CE2B6FB46754B699726C4AA1515F12E_228332BAE0224DD294E232B87D83948FQuadricMeshReduction_V1$2e0_2D95915274B0A9B6BA6E2C8A3B1776A78000000000100000001000000000000000100000001000000010000000000000000000000000000004000000000000000010000000000803F0000803F0000803F0000004000000000050000004E6F6E650030000000803F0000803F000000000000004100000000000034420303030000000000000000LS0MNSzzzzzzzz0"
+            OverrideMaterials(0)=Material'"/Engine/BasicShapes/BasicShapeMaterial.BasicShapeMaterial"'
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            RelativeLocation=(X=-475.000000,Y=30.000000,Z=22.000000)
+            RelativeRotation=(Pitch=90.000000,Yaw=0.000002,Roll=0.000002)
+            RelativeScale3D=(X=0.008000,Y=0.008000,Z=0.002000)
+            Mobility=Movable
+            CustomProperties 
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="Input_Port"
+         Tags(0)="Grabbable"
+      End Actor
+      Begin Actor Class=/Script/Engine.TextRenderActor Name=Gate_Name_1 Archetype=/Script/Engine.TextRenderActor'/Script/Engine.Default__TextRenderActor' ParentActor=NOT_Gate
+         Begin Object Class=/Script/Engine.TextRenderComponent Name="NewTextRenderComponent" Archetype=TextRenderComponent'/Script/Engine.Default__TextRenderActor:NewTextRenderComponent'
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype=BillboardComponent'/Script/Engine.Default__TextRenderActor:Sprite'
+         End Object
+         Begin Object Name="NewTextRenderComponent"
+            Text=NSLOCTEXT("[764D6BBD47E8990F8B3974AF1C019ECF]", "75D9FA1F4066722BA74A7A9E800E86F1", "NOT")
+            RelativeLocation=(X=-437.120056,Y=-197.500031,Z=31.500002)
+            RelativeRotation=(Pitch=90.000000,Yaw=0.000000,Roll=-90.000275)
+            RelativeScale3D=(X=1.605000,Y=0.750000,Z=0.625000)
+         End Object
+         Begin Object Name="Sprite"
+            AttachParent="NewTextRenderComponent"
+         End Object
+         TextRender="NewTextRenderComponent"
+         RootComponent="NewTextRenderComponent"
+         ActorLabel="Gate_Name"
+         Tags(0)="Grabbable"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=Output_7 Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor' ParentActor=NOT_Gate
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Cylinder.Cylinder"'
+            StaticMeshImportVersion=1
+            bUseDefaultCollision=False
+            StaticMeshDerivedDataKey="STATICMESH_9CE2B6FB46754B699726C4AA1515F12E_228332BAE0224DD294E232B87D83948FQuadricMeshReduction_V1$2e0_2D95915274B0A9B6BA6E2C8A3B1776A78000000000100000001000000000000000100000001000000010000000000000000000000000000004000000000000000010000000000803F0000803F0000803F0000004000000000050000004E6F6E650030000000803F0000803F000000000000004100000000000034420303030000000000000000LS0MNSzzzzzzzz0"
+            OverrideMaterials(0)=Material'"/Engine/BasicShapes/BasicShapeMaterial.BasicShapeMaterial"'
+            BodyInstance=(ObjectType=ECC_WorldDynamic,CollisionProfileName="BlockAllDynamic",MaxAngularVelocity=3599.999756)
+            RelativeLocation=(X=-394.851685,Y=-204.999908,Z=25.000000)
+            RelativeRotation=(Pitch=90.000000,Yaw=-0.000109,Roll=-0.000031)
+            RelativeScale3D=(X=0.040000,Y=0.040000,Z=0.070000)
+            Mobility=Movable
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="Output_1"
+         Tags(0)="Grabbable"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=Output_2 Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor' ParentActor=NOT_Gate
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Cylinder.Cylinder"'
+            StaticMeshImportVersion=1
+            bUseDefaultCollision=False
+            StaticMeshDerivedDataKey="STATICMESH_9CE2B6FB46754B699726C4AA1515F12E_228332BAE0224DD294E232B87D83948FQuadricMeshReduction_V1$2e0_2D95915274B0A9B6BA6E2C8A3B1776A78000000000100000001000000000000000100000001000000010000000000000000000000000000004000000000000000010000000000803F0000803F0000803F0000004000000000050000004E6F6E650030000000803F0000803F000000000000004100000000000034420303030000000000000000LS0MNSzzzzzzzz0"
+            OverrideMaterials(0)=Material'"/Engine/BasicShapes/BasicShapeMaterial.BasicShapeMaterial"'
+            BodyInstance=(ObjectType=ECC_WorldDynamic,CollisionProfileName="BlockAllDynamic",MaxAngularVelocity=3599.999756)
+            RelativeLocation=(X=-445.146240,Y=-205.000092,Z=25.000000)
+            RelativeRotation=(Pitch=90.000000,Yaw=0.000109,Roll=0.000179)
+            RelativeScale3D=(X=0.040000,Y=0.040000,Z=0.070000)
+            Mobility=Movable
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="Output_2"
+         Tags(0)="Grabbable"
+      End Actor
+      Begin Actor Class=/Game/Blueprints/VRPawn.VRPawn_C Name=VRPawn_2 Archetype=/Game/Blueprints/VRPawn.VRPawn_C'/Game/Blueprints/VRPawn.Default__VRPawn_C' ParentActor=PlayerStart
+         Begin Object Class=/Script/Engine.SceneComponent Name="DefaultSceneRoot" Archetype=SceneComponent'/Game/Blueprints/VRPawn.VRPawn_C:DefaultSceneRoot_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/Engine.SceneComponent Name="VRSceneRoot" Archetype=SceneComponent'/Game/Blueprints/VRPawn.VRPawn_C:VRSceneRoot_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/Engine.CameraComponent Name="VRCamera" Archetype=CameraComponent'/Game/Blueprints/VRPawn.VRPawn_C:VRCamera_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/HeadMountedDisplay.MotionControllerComponent Name="MotionControllerRight" Archetype=MotionControllerComponent'/Game/Blueprints/VRPawn.VRPawn_C:MotionControllerRight_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/Engine.PhysicsHandleComponent Name="PhysicsHandle" Archetype=PhysicsHandleComponent'/Game/Blueprints/VRPawn.VRPawn_C:PhysicsHandle_GEN_VARIABLE'
+         End Object
+         Begin Object Name="DefaultSceneRoot"
+            RelativeLocation=(X=-260.000000,Y=0.000000,Z=0.000000)
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+            UCSModifiedProperties(0)=(MemberParent=Class'"/Script/Engine.SceneComponent"',MemberName="RelativeLocation")
+         End Object
+         Begin Object Name="VRSceneRoot"
+            AttachParent="DefaultSceneRoot"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="VRCamera"
+            AttachParent="VRSceneRoot"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="MotionControllerRight"
+            AttachParent="DefaultSceneRoot"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="PhysicsHandle"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         PhysicsHandle="PhysicsHandle"
+         MotionControllerRight="MotionControllerRight"
+         VRCamera="VRCamera"
+         VRSceneRoot="VRSceneRoot"
+         DefaultSceneRoot="DefaultSceneRoot"
+         SpawnCollisionHandlingMethod=AlwaysSpawn
+         RootComponent="DefaultSceneRoot"
+         ActorLabel="VRPawn"
+      End Actor
+      Begin Actor Class=/Game/Blueprints/FPCharacter.FPCharacter_C Name=FPCharacter_2 Archetype=/Game/Blueprints/FPCharacter.FPCharacter_C'/Game/Blueprints/FPCharacter.Default__FPCharacter_C' ParentActor=PlayerStart
+         Begin Object Class=/Script/Engine.CapsuleComponent Name="CollisionCylinder" Archetype=CapsuleComponent'/Game/Blueprints/FPCharacter.Default__FPCharacter_C:CollisionCylinder'
+         End Object
+         Begin Object Class=/Script/Engine.ArrowComponent Name="Arrow" Archetype=ArrowComponent'/Game/Blueprints/FPCharacter.Default__FPCharacter_C:Arrow'
+         End Object
+         Begin Object Class=/Script/Engine.CharacterMovementComponent Name="CharMoveComp" Archetype=CharacterMovementComponent'/Game/Blueprints/FPCharacter.Default__FPCharacter_C:CharMoveComp'
+         End Object
+         Begin Object Class=/Script/Engine.SkeletalMeshComponent Name="CharacterMesh0" Archetype=SkeletalMeshComponent'/Game/Blueprints/FPCharacter.Default__FPCharacter_C:CharacterMesh0'
+         End Object
+         Begin Object Class=/Script/Engine.CameraComponent Name="FPCamera" Archetype=CameraComponent'/Game/Blueprints/FPCharacter.FPCharacter_C:FPCamera_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/Engine.PhysicsHandleComponent Name="PhysicsHandle" Archetype=PhysicsHandleComponent'/Game/Blueprints/FPCharacter.FPCharacter_C:PhysicsHandle_GEN_VARIABLE'
+         End Object
+         Begin Object Name="CollisionCylinder"
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            RelativeLocation=(X=-260.000000,Y=0.000000,Z=10.000000)
+         End Object
+         Begin Object Name="Arrow"
+            AttachParent="CollisionCylinder"
+         End Object
+         Begin Object Name="CharMoveComp"
+            WalkableFloorZ=0.710000
+            NavAgentProps=(AgentRadius=34.000000,AgentHeight=176.000000)
+         End Object
+         Begin Object Name="CharacterMesh0"
+            AttachParent="CollisionCylinder"
+            PrimaryComponentTick=(EndTickGroup=TG_PostPhysics)
+         End Object
+         Begin Object Name="FPCamera"
+            AttachParent="CollisionCylinder"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="PhysicsHandle"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         PhysicsHandle="PhysicsHandle"
+         FPCamera="FPCamera"
+         Mesh="CharacterMesh0"
+         CharacterMovement="CharMoveComp"
+         CapsuleComponent="CollisionCylinder"
+         AutoPossessPlayer=Player0
+         SpawnCollisionHandlingMethod=AlwaysSpawn
+         RootComponent="CollisionCylinder"
+         ActorLabel="FPCharacter"
+      End Actor
+      Begin Actor Class=/Script/Engine.StaticMeshActor Name=Cylinder2_2 Archetype=/Script/Engine.StaticMeshActor'/Script/Engine.Default__StaticMeshActor' ParentActor=Sphere_8
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMeshComponent0" Archetype=StaticMeshComponent'/Script/Engine.Default__StaticMeshActor:StaticMeshComponent0'
+         End Object
+         Begin Object Name="StaticMeshComponent0"
+            StaticMesh=StaticMesh'"/Engine/BasicShapes/Cylinder.Cylinder"'
+            StaticMeshImportVersion=1
+            StaticMeshDerivedDataKey="STATICMESH_9CE2B6FB46754B699726C4AA1515F12E_228332BAE0224DD294E232B87D83948FQuadricMeshReduction_V1$2e0_2D95915274B0A9B6BA6E2C8A3B1776A78000000000100000001000000000000000100000001000000010000000000000000000000000000004000000000000000010000000000803F0000803F0000803F0000004000000000050000004E6F6E650030000000803F0000803F000000000000004100000000000034420303030000000000000000LS0MNSzzzzzzzz0"
+            OverrideMaterials(0)=None
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            RelativeLocation=(X=-470.000000,Y=30.000000,Z=22.574625)
+            RelativeScale3D=(X=0.007000,Y=0.007000,Z=0.001288)
+            Mobility=Movable
+            CustomProperties 
+         End Object
+         StaticMeshComponent="StaticMeshComponent0"
+         RootComponent="StaticMeshComponent0"
+         ActorLabel="Cylinder2"
+         Tags(0)="Grabbable"
+      End Actor
+      Begin Actor Class=/Script/Engine.PointLight Name=PointLight_1 Archetype=/Script/Engine.PointLight'/Script/Engine.Default__PointLight' ParentActor=Cylinder2_2
+         Begin Object Class=/Script/Engine.PointLightComponent Name="LightComponent0" Archetype=PointLightComponent'/Script/Engine.Default__PointLight:LightComponent0'
+         End Object
+         Begin Object Name="LightComponent0"
+            SourceRadius=3.142514
+            IntensityUnits=Candelas
+            Intensity=0.200000
+            LightColor=(B=65,G=147,R=50,A=255)
+            RelativeLocation=(X=-470.000000,Y=30.000000,Z=22.574625)
+            RelativeScale3D=(X=1.000000,Y=1.000000,Z=0.675000)
+            Mobility=Movable
+         End Object
+         PointLightComponent="LightComponent0"
+         LightComponent="LightComponent0"
+         RootComponent="LightComponent0"
+         ActorLabel="PointLight"
+         Tags(0)="Grabbable"
+      End Actor
+   End Level
+Begin Surface
+End Surface
+End Map
